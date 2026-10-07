@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuoIM 即时通讯</title>
+    <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+    <!-- 登录/注册页 -->
+    <div id="auth-page">
+        <div class="auth-box">
+            <h2 id="auth-title">登录</h2>
+            <input id="name-input" placeholder="昵称（注册时填）" class="hidden">
+            <input id="phone-input" placeholder="手机号">
+            <input id="password-input" placeholder="密码" type="password">
+            <button id="auth-btn">登录</button>
+            <a id="toggle-auth" href="#">没有账号？去注册</a>
+        </div>
+    </div>
+
+    <!-- 聊天页 -->
+    <div id="chat-page" class="hidden">
+        <aside id="sidebar">
+            <div class="sidebar-header">TuoIM</div>
+            <div id="search-box">
+                <input id="search-input" placeholder="搜索手机号加好友">
+                <button id="search-btn">搜索</button>
+            </div>
+            <div id="search-result"></div>
+            <div class="list-title">好友</div>
+            <div id="friend-list"></div>
+            <div class="list-title">群聊 <button id="create-group-btn" class="add-btn">+ 建群</button></div>
+            <div id="group-list"></div>
+            <div class="list-title" id="apply-list-title">申请列表 <span id="unread-badge"></span></div>
+            <div id="apply-list"></div>
+            <div id="profile-btn">个人中心</div>
+        </aside>
+        <main id="chat-area">
+            <div id="chat-header">
+                <button id="back-btn">← 返回</button>
+                <span id="chat-header-name">选择一个好友开始聊天</span>
+                <button id="group-members-btn" class="hidden">成员</button>
+            </div>
+            <div id="message-list"></div>
+            <div id="emoji-panel" class="hidden"></div>
+            <div id="input-box">
+                <button id="emoji-btn" title="表情">😀</button>
+                <button id="image-btn" title="发送图片">+</button>
+                <input type="file" id="image-input" accept="image/*" class="hidden">
+                <input id="message-input" placeholder="输入消息..." disabled>
+                <button id="send-btn" disabled>发送</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- 个人中心弹窗 -->
+    <div id="profile-modal" class="hidden">
+        <div class="profile-box">
+            <h3>个人中心</h3>
+            <div id="profile-info"></div>
+            <div class="edit-area">
+                <input id="edit-name" placeholder="修改昵称">
+                <select id="edit-sex">
+                    <option value="0">性别：未知</option>
+                    <option value="1">性别：男</option>
+                    <option value="2">性别：女</option>
+                </select>
+                <input type="file" id="avatar-input" accept="image/*" class="hidden">
+                <button id="upload-avatar-btn">更换头像</button>
+                <button id="save-profile-btn">保存资料</button>
+            </div>
+            <div class="profile-actions">
+                <button id="logout-btn">退出登录</button>
+                <button id="close-profile-btn">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 建群弹窗 -->
+    <div id="create-group-modal" class="hidden">
+        <div class="profile-box">
+            <h3>创建群聊</h3>
+            <input id="group-name-input" placeholder="群名称">
+            <div class="profile-actions">
+                <button id="confirm-create-group-btn">创建</button>
+                <button id="close-group-btn">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 群成员弹窗 -->
+    <div id="group-members-modal" class="hidden">
+        <div class="profile-box">
+            <h3>群成员</h3>
+            <div id="group-members-list"></div>
+            <button id="add-member-btn" class="hidden">+ 加人</button>
+            <input type="file" id="group-avatar-input" accept="image/*" class="hidden">
+            <button id="upload-group-avatar-btn" class="hidden">更换群头像</button>
+            <div class="profile-actions">
+                <button id="close-group-members-btn">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加人弹窗 -->
+    <div id="add-member-modal" class="hidden">
+        <div class="profile-box">
+            <h3>选择要添加的好友</h3>
+            <div id="add-member-friend-list"></div>
+            <div class="profile-actions">
+                <button id="close-add-member-btn">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=1"></script>
+</body>
+</html>
