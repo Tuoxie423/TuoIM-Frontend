@@ -2,7 +2,10 @@
 
 TuoIM 即时通讯系统的 **Web 前端**：一个纯静态的 HTML / CSS / JS 单页应用，无构建依赖，开箱即用。通过 HTTP 调用后端 API、WebSocket 接收实时消息推送，支持登录注册、好友管理、单聊、群聊、图片消息、个人资料等功能。
 
-> 🔗 **后端仓库（TuoIM 服务端）**：<https://gitee.com/tuoxie423/tuo-im.git>
+> 🔗 **后端仓库（TuoIM 服务端）**：
+>
+> - Gitee：<https://gitee.com/tuoxie423/tuo-im.git>
+> - GitHub：<https://github.com/Tuoxie423/TuoIM>
 >
 > 本前端仅提供界面与交互，所有数据都来自后端接口，**运行前请先启动后端**。
 
