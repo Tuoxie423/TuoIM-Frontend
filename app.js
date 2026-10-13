@@ -230,7 +230,7 @@ async function searchUser() {
     const u = data.data;
     const div = document.createElement('div');
     div.className = 'search-item';
-    div.innerHTML = `<span class="name">${u.name} (${u.phone})</span>`;
+    div.innerHTML = `<span class="name">${u.name} (${phone})</span>`;
     const btn = document.createElement('button');
     btn.className = 'item-btn';
     btn.textContent = '加好友';
